@@ -20,4 +20,7 @@ jobs:
 
     - name: Build
       run: go build -v ./...
+      
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag helloWorld:$(date +%s)
 
